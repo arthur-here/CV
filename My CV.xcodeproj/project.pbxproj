@@ -19,6 +19,8 @@
 		EC895E041CD10D1C00D3FD46 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC895DFB1CD1079E00D3FD46 /* ProximaNova-Light.otf */; };
 		EC895E051CD10D1C00D3FD46 /* ProximaNova-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC895DFC1CD1079E00D3FD46 /* ProximaNova-Reg.otf */; };
 		EC895E081CD1106000D3FD46 /* ColorsPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E071CD1106000D3FD46 /* ColorsPalette.swift */; };
+		EC895E0A1CD11AFF00D3FD46 /* TrapezeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E091CD11AFF00D3FD46 /* TrapezeButton.swift */; };
+		EC895E0D1CD11E8A00D3FD46 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E0C1CD11E8A00D3FD46 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		EC895DFF1CD10A9A00D3FD46 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedButton.swift; path = Helpers/Views/RoundedButton.swift; sourceTree = "<group>"; };
 		EC895E011CD10C5000D3FD46 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Classes/Welcome/WelcomeViewController.swift; sourceTree = "<group>"; };
 		EC895E071CD1106000D3FD46 /* ColorsPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorsPalette.swift; path = Helpers/Constants/ColorsPalette.swift; sourceTree = "<group>"; };
+		EC895E091CD11AFF00D3FD46 /* TrapezeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrapezeButton.swift; path = Helpers/Views/TrapezeButton.swift; sourceTree = "<group>"; };
+		EC895E0C1CD11E8A00D3FD46 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = "Classes/Main Menu/MenuViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				EC895DFD1CD10A5400D3FD46 /* Welcome */,
+				EC895E0B1CD11E3B00D3FD46 /* Main Menu */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				EC895DFF1CD10A9A00D3FD46 /* RoundedButton.swift */,
+				EC895E091CD11AFF00D3FD46 /* TrapezeButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -171,6 +177,14 @@
 				EC895E071CD1106000D3FD46 /* ColorsPalette.swift */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		EC895E0B1CD11E3B00D3FD46 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				EC895E0C1CD11E8A00D3FD46 /* MenuViewController.swift */,
+			);
+			name = "Main Menu";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +266,9 @@
 				EC05A0791CCFE8C3000E263B /* ViewController.swift in Sources */,
 				EC05A0771CCFE8C3000E263B /* AppDelegate.swift in Sources */,
 				EC895E001CD10A9A00D3FD46 /* RoundedButton.swift in Sources */,
+				EC895E0A1CD11AFF00D3FD46 /* TrapezeButton.swift in Sources */,
 				EC895E081CD1106000D3FD46 /* ColorsPalette.swift in Sources */,
+				EC895E0D1CD11E8A00D3FD46 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
