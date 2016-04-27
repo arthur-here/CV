@@ -12,6 +12,13 @@
 		EC05A07C1CCFE8C3000E263B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC05A07A1CCFE8C3000E263B /* Main.storyboard */; };
 		EC05A07E1CCFE8C3000E263B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC05A07D1CCFE8C3000E263B /* Assets.xcassets */; };
 		EC05A0811CCFE8C3000E263B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC05A07F1CCFE8C3000E263B /* LaunchScreen.storyboard */; };
+		EC895DF81CD1074600D3FD46 /* PrettyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895DF71CD1074600D3FD46 /* PrettyImageView.swift */; };
+		EC895E001CD10A9A00D3FD46 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895DFF1CD10A9A00D3FD46 /* RoundedButton.swift */; };
+		EC895E021CD10C5000D3FD46 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E011CD10C5000D3FD46 /* WelcomeViewController.swift */; };
+		EC895E031CD10D1C00D3FD46 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC895DFA1CD1079E00D3FD46 /* ProximaNova-Bold.otf */; };
+		EC895E041CD10D1C00D3FD46 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC895DFB1CD1079E00D3FD46 /* ProximaNova-Light.otf */; };
+		EC895E051CD10D1C00D3FD46 /* ProximaNova-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC895DFC1CD1079E00D3FD46 /* ProximaNova-Reg.otf */; };
+		EC895E081CD1106000D3FD46 /* ColorsPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E071CD1106000D3FD46 /* ColorsPalette.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		EC05A07D1CCFE8C3000E263B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC05A0801CCFE8C3000E263B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC05A0821CCFE8C3000E263B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC895DF71CD1074600D3FD46 /* PrettyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrettyImageView.swift; path = Libraries/PrettyImageView.swift; sourceTree = "<group>"; };
+		EC895DFA1CD1079E00D3FD46 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Bold.otf"; path = "Resources/Fonts/ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		EC895DFB1CD1079E00D3FD46 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Light.otf"; path = "Resources/Fonts/ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		EC895DFC1CD1079E00D3FD46 /* ProximaNova-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Reg.otf"; path = "Resources/Fonts/ProximaNova-Reg.otf"; sourceTree = "<group>"; };
+		EC895DFF1CD10A9A00D3FD46 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedButton.swift; path = Helpers/Views/RoundedButton.swift; sourceTree = "<group>"; };
+		EC895E011CD10C5000D3FD46 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Classes/Welcome/WelcomeViewController.swift; sourceTree = "<group>"; };
+		EC895E071CD1106000D3FD46 /* ColorsPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorsPalette.swift; path = Helpers/Constants/ColorsPalette.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,109 @@
 		EC05A0751CCFE8C3000E263B /* My CV */ = {
 			isa = PBXGroup;
 			children = (
+				EC895DF21CD1067800D3FD46 /* Helpers */,
+				EC895DF11CD1067300D3FD46 /* Models */,
+				EC895DF01CD1066700D3FD46 /* Classes */,
+				EC895DF31CD1067E00D3FD46 /* Resources */,
 				EC05A0761CCFE8C3000E263B /* AppDelegate.swift */,
 				EC05A0781CCFE8C3000E263B /* ViewController.swift */,
-				EC05A07A1CCFE8C3000E263B /* Main.storyboard */,
-				EC05A07D1CCFE8C3000E263B /* Assets.xcassets */,
-				EC05A07F1CCFE8C3000E263B /* LaunchScreen.storyboard */,
-				EC05A0821CCFE8C3000E263B /* Info.plist */,
+				EC895DF61CD106E100D3FD46 /* Libraries */,
 			);
 			path = "My CV";
+			sourceTree = "<group>";
+		};
+		EC895DF01CD1066700D3FD46 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EC895DFD1CD10A5400D3FD46 /* Welcome */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		EC895DF11CD1067300D3FD46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EC895DF21CD1067800D3FD46 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EC895DFE1CD10A6D00D3FD46 /* Views */,
+				EC895E061CD1102A00D3FD46 /* Constants */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		EC895DF31CD1067E00D3FD46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC895DF41CD1068700D3FD46 /* Storyboards */,
+				EC05A07D1CCFE8C3000E263B /* Assets.xcassets */,
+				EC895DF51CD1069C00D3FD46 /* Other */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EC895DF41CD1068700D3FD46 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EC05A07A1CCFE8C3000E263B /* Main.storyboard */,
+				EC05A07F1CCFE8C3000E263B /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		EC895DF51CD1069C00D3FD46 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				EC895DF91CD1078800D3FD46 /* Fonts */,
+				EC05A0821CCFE8C3000E263B /* Info.plist */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		EC895DF61CD106E100D3FD46 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				EC895DF71CD1074600D3FD46 /* PrettyImageView.swift */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		EC895DF91CD1078800D3FD46 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EC895DFA1CD1079E00D3FD46 /* ProximaNova-Bold.otf */,
+				EC895DFB1CD1079E00D3FD46 /* ProximaNova-Light.otf */,
+				EC895DFC1CD1079E00D3FD46 /* ProximaNova-Reg.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		EC895DFD1CD10A5400D3FD46 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				EC895E011CD10C5000D3FD46 /* WelcomeViewController.swift */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
+		EC895DFE1CD10A6D00D3FD46 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC895DFF1CD10A9A00D3FD46 /* RoundedButton.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EC895E061CD1102A00D3FD46 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EC895E071CD1106000D3FD46 /* ColorsPalette.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +231,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC895E031CD10D1C00D3FD46 /* ProximaNova-Bold.otf in Resources */,
+				EC895E041CD10D1C00D3FD46 /* ProximaNova-Light.otf in Resources */,
+				EC895E051CD10D1C00D3FD46 /* ProximaNova-Reg.otf in Resources */,
 				EC05A0811CCFE8C3000E263B /* LaunchScreen.storyboard in Resources */,
 				EC05A07E1CCFE8C3000E263B /* Assets.xcassets in Resources */,
 				EC05A07C1CCFE8C3000E263B /* Main.storyboard in Resources */,
@@ -135,8 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC895DF81CD1074600D3FD46 /* PrettyImageView.swift in Sources */,
+				EC895E021CD10C5000D3FD46 /* WelcomeViewController.swift in Sources */,
 				EC05A0791CCFE8C3000E263B /* ViewController.swift in Sources */,
 				EC05A0771CCFE8C3000E263B /* AppDelegate.swift in Sources */,
+				EC895E001CD10A9A00D3FD46 /* RoundedButton.swift in Sources */,
+				EC895E081CD1106000D3FD46 /* ColorsPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +404,7 @@
 				EC05A0871CCFE8C3000E263B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

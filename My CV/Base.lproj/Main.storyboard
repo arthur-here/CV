@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Bold.otf">
+            <string>ProximaNova-Bold</string>
+            <string>ProximaNova-Bold</string>
+            <string>ProximaNova-Bold</string>
+        </mutableArray>
+        <mutableArray key="ProximaNova-Reg.otf">
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="My_CV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +28,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARTHUR MYRONENKO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="SlU-oX-6xv">
+                                <rect key="frame" x="173" y="285" width="254" height="30"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, I'm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="puP-GJ-sjy">
+                                <rect key="frame" x="256" y="250" width="89" height="27"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y6S-01-LEB">
+                                <rect key="frame" x="228" y="323" width="144" height="27"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqL-iE-4bj" customClass="PrettyImageView" customModule="My_CV" customModuleProvider="target">
+                                <rect key="frame" x="236" y="103" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="fjv-ZH-Cwl"/>
+                                    <constraint firstAttribute="width" secondItem="wqL-iE-4bj" secondAttribute="height" multiplier="1:1" id="gOq-3B-FTh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CI3-NW-42u" customClass="RoundedButton" customModule="My_CV" customModuleProvider="target">
+                                <rect key="frame" x="213" y="376" width="174" height="45"/>
+                                <color key="backgroundColor" red="0.83137254901960778" green="0.16078431372549018" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CI3-NW-42u" secondAttribute="height" multiplier="3.9:1" id="wZG-Uh-N9d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="17"/>
+                                <state key="normal" title="Learn more"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="SlU-oX-6xv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="56Y-AV-fyd"/>
+                            <constraint firstItem="Y6S-01-LEB" firstAttribute="top" secondItem="SlU-oX-6xv" secondAttribute="bottom" constant="8" id="AYo-d1-gPU"/>
+                            <constraint firstItem="Y6S-01-LEB" firstAttribute="centerX" secondItem="SlU-oX-6xv" secondAttribute="centerX" id="FWn-1g-nFl"/>
+                            <constraint firstItem="wqL-iE-4bj" firstAttribute="centerX" secondItem="puP-GJ-sjy" secondAttribute="centerX" id="IaV-nH-jji"/>
+                            <constraint firstItem="puP-GJ-sjy" firstAttribute="centerX" secondItem="SlU-oX-6xv" secondAttribute="centerX" id="NUS-V3-ABg"/>
+                            <constraint firstItem="CI3-NW-42u" firstAttribute="top" secondItem="Y6S-01-LEB" secondAttribute="bottom" constant="26" id="Odi-nC-wjN"/>
+                            <constraint firstItem="CI3-NW-42u" firstAttribute="centerX" secondItem="Y6S-01-LEB" secondAttribute="centerX" id="QTK-Df-pen"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="SlU-oX-6xv" secondAttribute="trailing" constant="8" id="RY7-oh-bgk"/>
+                            <constraint firstItem="SlU-oX-6xv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SgZ-s4-IbL"/>
+                            <constraint firstItem="puP-GJ-sjy" firstAttribute="top" secondItem="wqL-iE-4bj" secondAttribute="bottom" constant="19" id="bWM-Q7-xPV"/>
+                            <constraint firstItem="SlU-oX-6xv" firstAttribute="top" secondItem="puP-GJ-sjy" secondAttribute="bottom" constant="8" id="cQj-me-WEL"/>
+                            <constraint firstItem="CI3-NW-42u" firstAttribute="width" secondItem="Y6S-01-LEB" secondAttribute="width" constant="30" id="ebg-0w-NcW"/>
+                            <constraint firstItem="SlU-oX-6xv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="y6N-Dr-acI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="prettyImageView" destination="wqL-iE-4bj" id="xKN-Ou-zni"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="355" y="388"/>
         </scene>
     </scenes>
 </document>
