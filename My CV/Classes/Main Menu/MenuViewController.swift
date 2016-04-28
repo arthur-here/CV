@@ -49,7 +49,7 @@ class MenuViewController: UIViewController {
     }
     
     func showWorkExperience() {
-//        performSegueWithIdentifier(Storyboard.Segues.WorkExperience, sender: nil)
+        performSegueWithIdentifier(Storyboard.Segues.WorkExperience, sender: nil)
     }
     
     func showSkills() {

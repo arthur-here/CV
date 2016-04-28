@@ -28,6 +28,10 @@
 		EC895E1B1CD1496500D3FD46 /* ListBulletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E1A1CD1496500D3FD46 /* ListBulletCell.swift */; };
 		EC895E1E1CD21AEF00D3FD46 /* CustomNavigationBarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E1D1CD21AEF00D3FD46 /* CustomNavigationBarType.swift */; };
 		EC895E201CD21F0300D3FD46 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E1F1CD21F0300D3FD46 /* AboutViewController.swift */; };
+		EC895E231CD2367500D3FD46 /* WorkExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E221CD2367500D3FD46 /* WorkExperienceViewController.swift */; };
+		EC895E261CD23A2D00D3FD46 /* WorkExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E251CD23A2D00D3FD46 /* WorkExampleViewController.swift */; };
+		EC895E281CD23D0E00D3FD46 /* WorkExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E271CD23D0E00D3FD46 /* WorkExample.swift */; };
+		EC895E2B1CD243D700D3FD46 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E2A1CD243D700D3FD46 /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		EC895E1A1CD1496500D3FD46 /* ListBulletCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListBulletCell.swift; path = "Classes/About Me/Cells/ListBulletCell.swift"; sourceTree = "<group>"; };
 		EC895E1D1CD21AEF00D3FD46 /* CustomNavigationBarType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomNavigationBarType.swift; path = Protocols/CustomNavigationBarType.swift; sourceTree = "<group>"; };
 		EC895E1F1CD21F0300D3FD46 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = "Classes/About Me/AboutViewController.swift"; sourceTree = "<group>"; };
+		EC895E221CD2367500D3FD46 /* WorkExperienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkExperienceViewController.swift; path = "Classes/Work Experience/ViewControllers/WorkExperienceViewController.swift"; sourceTree = "<group>"; };
+		EC895E251CD23A2D00D3FD46 /* WorkExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkExampleViewController.swift; path = "Classes/Work Experience/ViewControllers/WorkExampleViewController.swift"; sourceTree = "<group>"; };
+		EC895E271CD23D0E00D3FD46 /* WorkExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkExample.swift; path = Models/WorkExample.swift; sourceTree = "<group>"; };
+		EC895E2A1CD243D700D3FD46 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = Services/DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 				EC895DFD1CD10A5400D3FD46 /* Welcome */,
 				EC895E0B1CD11E3B00D3FD46 /* Main Menu */,
 				EC895E0E1CD12FC600D3FD46 /* About Me */,
+				EC895E211CD2363300D3FD46 /* Work Experience */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -110,6 +119,7 @@
 		EC895DF11CD1067300D3FD46 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EC895E271CD23D0E00D3FD46 /* WorkExample.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -117,6 +127,7 @@
 		EC895DF21CD1067800D3FD46 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EC895E291CD2439400D3FD46 /* Services */,
 				EC895E1C1CD2199200D3FD46 /* Extensions */,
 				EC895DFE1CD10A6D00D3FD46 /* Views */,
 				EC895E061CD1102A00D3FD46 /* Constants */,
@@ -232,6 +243,31 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		EC895E211CD2363300D3FD46 /* Work Experience */ = {
+			isa = PBXGroup;
+			children = (
+				EC895E241CD2367900D3FD46 /* ViewControllers */,
+			);
+			name = "Work Experience";
+			sourceTree = "<group>";
+		};
+		EC895E241CD2367900D3FD46 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC895E221CD2367500D3FD46 /* WorkExperienceViewController.swift */,
+				EC895E251CD23A2D00D3FD46 /* WorkExampleViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EC895E291CD2439400D3FD46 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EC895E2A1CD243D700D3FD46 /* DataProvider.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,6 +300,7 @@
 				TargetAttributes = {
 					EC05A0721CCFE8C3000E263B = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2AD5FF27TX;
 					};
 				};
 			};
@@ -309,18 +346,22 @@
 				EC895DF81CD1074600D3FD46 /* PrettyImageView.swift in Sources */,
 				EC895E111CD1302C00D3FD46 /* PhotoCell.swift in Sources */,
 				EC895E021CD10C5000D3FD46 /* WelcomeViewController.swift in Sources */,
+				EC895E231CD2367500D3FD46 /* WorkExperienceViewController.swift in Sources */,
 				EC895E1B1CD1496500D3FD46 /* ListBulletCell.swift in Sources */,
 				EC05A0791CCFE8C3000E263B /* ViewController.swift in Sources */,
 				EC895E171CD13D0E00D3FD46 /* HeaderCell.swift in Sources */,
+				EC895E2B1CD243D700D3FD46 /* DataProvider.swift in Sources */,
 				EC05A0771CCFE8C3000E263B /* AppDelegate.swift in Sources */,
 				EC895E001CD10A9A00D3FD46 /* RoundedButton.swift in Sources */,
 				EC895E1E1CD21AEF00D3FD46 /* CustomNavigationBarType.swift in Sources */,
 				EC895E151CD138C200D3FD46 /* SlicedView.swift in Sources */,
 				EC895E0A1CD11AFF00D3FD46 /* TrapezeButton.swift in Sources */,
 				EC895E191CD141DF00D3FD46 /* AboutCell.swift in Sources */,
+				EC895E281CD23D0E00D3FD46 /* WorkExample.swift in Sources */,
 				EC895E081CD1106000D3FD46 /* ColorsPalette.swift in Sources */,
 				EC895E201CD21F0300D3FD46 /* AboutViewController.swift in Sources */,
 				EC895E0D1CD11E8A00D3FD46 /* MenuViewController.swift in Sources */,
+				EC895E261CD23A2D00D3FD46 /* WorkExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,10 +476,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "My CV/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "arthurmyronenko.My-CV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -446,10 +490,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "My CV/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "arthurmyronenko.My-CV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
