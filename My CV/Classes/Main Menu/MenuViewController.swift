@@ -55,7 +55,7 @@ class MenuViewController: UIViewController {
     }
     
     func showSkills() {
-//        performSegueWithIdentifier(Storyboard.Segues.Skills, sender: nil)
+        performSegueWithIdentifier(Storyboard.Segues.Skills, sender: nil)
     }
     
     func showEducation() {

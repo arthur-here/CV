@@ -32,6 +32,10 @@
 		EC895E261CD23A2D00D3FD46 /* WorkExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E251CD23A2D00D3FD46 /* WorkExampleViewController.swift */; };
 		EC895E281CD23D0E00D3FD46 /* WorkExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E271CD23D0E00D3FD46 /* WorkExample.swift */; };
 		EC895E2B1CD243D700D3FD46 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E2A1CD243D700D3FD46 /* DataProvider.swift */; };
+		EC895E2D1CD28F4800D3FD46 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E2C1CD28F4800D3FD46 /* ProgressBar.swift */; };
+		EC895E311CD2927600D3FD46 /* SkillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E301CD2927600D3FD46 /* SkillCell.swift */; };
+		EC895E331CD292BE00D3FD46 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E321CD292BE00D3FD46 /* Skill.swift */; };
+		EC895E351CD2941500D3FD46 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E341CD2941500D3FD46 /* SkillsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		EC895E251CD23A2D00D3FD46 /* WorkExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkExampleViewController.swift; path = "Classes/Work Experience/ViewControllers/WorkExampleViewController.swift"; sourceTree = "<group>"; };
 		EC895E271CD23D0E00D3FD46 /* WorkExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkExample.swift; path = Models/WorkExample.swift; sourceTree = "<group>"; };
 		EC895E2A1CD243D700D3FD46 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = Services/DataProvider.swift; sourceTree = "<group>"; };
+		EC895E2C1CD28F4800D3FD46 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressBar.swift; path = Helpers/Views/ProgressBar.swift; sourceTree = "<group>"; };
+		EC895E301CD2927600D3FD46 /* SkillCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SkillCell.swift; path = Classes/Skills/Cells/SkillCell.swift; sourceTree = "<group>"; };
+		EC895E321CD292BE00D3FD46 /* Skill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Skill.swift; path = Models/Skill.swift; sourceTree = "<group>"; };
+		EC895E341CD2941500D3FD46 /* SkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SkillsViewController.swift; path = Classes/Skills/SkillsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,7 @@
 				EC895E0B1CD11E3B00D3FD46 /* Main Menu */,
 				EC895E0E1CD12FC600D3FD46 /* About Me */,
 				EC895E211CD2363300D3FD46 /* Work Experience */,
+				EC895E2E1CD2923900D3FD46 /* Skills */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -120,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				EC895E271CD23D0E00D3FD46 /* WorkExample.swift */,
+				EC895E321CD292BE00D3FD46 /* Skill.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -196,6 +206,7 @@
 				EC895E091CD11AFF00D3FD46 /* TrapezeButton.swift */,
 				EC895E141CD138C200D3FD46 /* SlicedView.swift */,
 				EC895E161CD13D0E00D3FD46 /* HeaderCell.swift */,
+				EC895E2C1CD28F4800D3FD46 /* ProgressBar.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -219,8 +230,8 @@
 		EC895E0E1CD12FC600D3FD46 /* About Me */ = {
 			isa = PBXGroup;
 			children = (
-				EC895E0F1CD1300400D3FD46 /* Cells */,
 				EC895E1F1CD21F0300D3FD46 /* AboutViewController.swift */,
+				EC895E0F1CD1300400D3FD46 /* Cells */,
 			);
 			name = "About Me";
 			sourceTree = "<group>";
@@ -266,6 +277,23 @@
 				EC895E2A1CD243D700D3FD46 /* DataProvider.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		EC895E2E1CD2923900D3FD46 /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				EC895E341CD2941500D3FD46 /* SkillsViewController.swift */,
+				EC895E2F1CD2924B00D3FD46 /* Cells */,
+			);
+			name = Skills;
+			sourceTree = "<group>";
+		};
+		EC895E2F1CD2924B00D3FD46 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EC895E301CD2927600D3FD46 /* SkillCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +373,7 @@
 			files = (
 				EC895DF81CD1074600D3FD46 /* PrettyImageView.swift in Sources */,
 				EC895E111CD1302C00D3FD46 /* PhotoCell.swift in Sources */,
+				EC895E351CD2941500D3FD46 /* SkillsViewController.swift in Sources */,
 				EC895E021CD10C5000D3FD46 /* WelcomeViewController.swift in Sources */,
 				EC895E231CD2367500D3FD46 /* WorkExperienceViewController.swift in Sources */,
 				EC895E1B1CD1496500D3FD46 /* ListBulletCell.swift in Sources */,
@@ -352,6 +381,7 @@
 				EC895E171CD13D0E00D3FD46 /* HeaderCell.swift in Sources */,
 				EC895E2B1CD243D700D3FD46 /* DataProvider.swift in Sources */,
 				EC05A0771CCFE8C3000E263B /* AppDelegate.swift in Sources */,
+				EC895E331CD292BE00D3FD46 /* Skill.swift in Sources */,
 				EC895E001CD10A9A00D3FD46 /* RoundedButton.swift in Sources */,
 				EC895E1E1CD21AEF00D3FD46 /* CustomNavigationBarType.swift in Sources */,
 				EC895E151CD138C200D3FD46 /* SlicedView.swift in Sources */,
@@ -359,8 +389,10 @@
 				EC895E191CD141DF00D3FD46 /* AboutCell.swift in Sources */,
 				EC895E281CD23D0E00D3FD46 /* WorkExample.swift in Sources */,
 				EC895E081CD1106000D3FD46 /* ColorsPalette.swift in Sources */,
+				EC895E311CD2927600D3FD46 /* SkillCell.swift in Sources */,
 				EC895E201CD21F0300D3FD46 /* AboutViewController.swift in Sources */,
 				EC895E0D1CD11E8A00D3FD46 /* MenuViewController.swift in Sources */,
+				EC895E2D1CD28F4800D3FD46 /* ProgressBar.swift in Sources */,
 				EC895E261CD23A2D00D3FD46 /* WorkExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +515,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "arthurmyronenko.My-CV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -497,6 +530,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "arthurmyronenko.My-CV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -18,6 +18,7 @@
             <string>ProximaNova-Light</string>
             <string>ProximaNova-Light</string>
             <string>ProximaNova-Light</string>
+            <string>ProximaNova-Light</string>
         </mutableArray>
         <mutableArray key="ProximaNova-Reg.otf">
             <string>ProximaNova-Regular</string>
@@ -116,6 +117,7 @@
                     <connections>
                         <segue destination="EBH-yg-rcC" kind="show" identifier="Show About" id="NnO-Iq-hTM"/>
                         <segue destination="9Uo-24-gwq" kind="show" identifier="Show Work Experience" id="KVZ-bC-cLa"/>
+                        <segue destination="isF-Ry-diJ" kind="show" identifier="Show Skills" id="h9M-Gk-RE1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWg-u2-DIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -258,7 +260,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEk-Ck-DKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2555" y="424"/>
+            <point key="canvasLocation" x="2567" y="424"/>
         </scene>
         <!--Work Experience View Controller-->
         <scene sceneID="Yvq-QK-chx">
@@ -276,7 +278,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSI-h4-S16" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2555" y="1204"/>
+            <point key="canvasLocation" x="2567" y="1204"/>
+        </scene>
+        <!--Skills View Controller-->
+        <scene sceneID="7P3-aM-kDZ">
+            <objects>
+                <tableViewController id="isF-Ry-diJ" customClass="SkillsViewController" customModule="My_CV" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" id="6F7-Mr-iV2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Header Cell" rowHeight="69" id="F9W-WJ-LFa" customClass="HeaderCell" customModule="My_CV" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="69"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F9W-WJ-LFa" id="Wyg-bg-uel">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCp-SP-T07" customClass="SlicedView" customModule="My_CV" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="12" width="175" height="45"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="175" id="pdx-hg-xuE"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="WCp-SP-T07" firstAttribute="leading" secondItem="Wyg-bg-uel" secondAttribute="leadingMargin" constant="-8" id="Ck2-C2-TJc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="WCp-SP-T07" secondAttribute="bottom" constant="4" id="RN6-2H-jO8"/>
+                                        <constraint firstItem="WCp-SP-T07" firstAttribute="top" secondItem="Wyg-bg-uel" secondAttribute="topMargin" constant="4" id="csy-xH-fAe"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="slicedTitle" destination="WCp-SP-T07" id="Q6h-lf-SSO"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Skill Cell" rowHeight="69" id="VgF-2f-cto" customClass="SkillCell" customModule="My_CV" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="97" width="600" height="69"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VgF-2f-cto" id="g9s-PZ-wgT">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQP-Dz-yl8" customClass="ProgressBar" customModule="My_CV" customModuleProvider="target">
+                                            <rect key="frame" x="401" y="23" width="175" height="23"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="175" id="6YF-7b-hH3"/>
+                                                <constraint firstAttribute="height" constant="23" id="xMr-Ed-EHv"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ei6-lW-UQC">
+                                            <rect key="frame" x="24" y="8" width="361" height="53"/>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="Ei6-lW-UQC" firstAttribute="top" secondItem="g9s-PZ-wgT" secondAttribute="topMargin" id="7QA-w3-xRR"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="Ei6-lW-UQC" secondAttribute="leading" constant="-16" id="ICY-VX-h1R"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="HQP-Dz-yl8" secondAttribute="trailing" constant="16" id="PmW-pG-owy"/>
+                                        <constraint firstItem="Ei6-lW-UQC" firstAttribute="centerY" secondItem="g9s-PZ-wgT" secondAttribute="centerY" id="WOR-MG-ag8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="HQP-Dz-yl8" secondAttribute="bottom" constant="3" id="a6M-80-eMa"/>
+                                        <constraint firstItem="HQP-Dz-yl8" firstAttribute="centerY" secondItem="g9s-PZ-wgT" secondAttribute="centerY" id="hXR-Ww-2oV"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Ei6-lW-UQC" secondAttribute="bottom" constant="9" id="jvD-dr-1jJ"/>
+                                        <constraint firstItem="HQP-Dz-yl8" firstAttribute="top" secondItem="g9s-PZ-wgT" secondAttribute="topMargin" constant="3" id="q1E-i2-Dga"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Ei6-lW-UQC" secondAttribute="bottom" id="ubr-yG-9gf"/>
+                                        <constraint firstItem="HQP-Dz-yl8" firstAttribute="leading" secondItem="Ei6-lW-UQC" secondAttribute="trailing" constant="16" id="xc7-DT-Eru"/>
+                                        <constraint firstItem="Ei6-lW-UQC" firstAttribute="top" secondItem="g9s-PZ-wgT" secondAttribute="topMargin" constant="8" id="zUS-XH-bQP"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="WOR-MG-ag8"/>
+                                            <exclude reference="jvD-dr-1jJ"/>
+                                            <exclude reference="zUS-XH-bQP"/>
+                                            <exclude reference="a6M-80-eMa"/>
+                                            <exclude reference="q1E-i2-Dga"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="progressBar" destination="HQP-Dz-yl8" id="LeH-dc-hLg"/>
+                                    <outlet property="skillNameLabel" destination="Ei6-lW-UQC" id="BWb-OU-GR2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="isF-Ry-diJ" id="SPZ-ea-sJT"/>
+                            <outlet property="delegate" destination="isF-Ry-diJ" id="LuK-bv-eWP"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DVM-ZS-UVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2567" y="1957"/>
         </scene>
         <!--Work Example View Controller-->
         <scene sceneID="egA-4g-1Fk">
@@ -368,7 +470,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMd-C2-Erj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3269" y="1204"/>
+            <point key="canvasLocation" x="3281" y="1204"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ryk-la-rfU">

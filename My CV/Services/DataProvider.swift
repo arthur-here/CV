@@ -9,6 +9,7 @@
 import UIKit
 
 class DataProvider {
+    
     func getWorkExamples() -> [WorkExample] {
         let first = WorkExample(name: "Speedometer",
                                 icon: UIImage(named: "speedometer-icon")!,
@@ -30,5 +31,32 @@ class DataProvider {
                                 appStoreLink: NSURL(string: "itms-apps://itunes.apple.com/ua/app/kartocki-so-zvukami-dla-detej/id1064030391")!)
         
         return [first, second, third]
+    }
+    
+    func getSkills() -> [(String, [Skill])] {
+        return [
+            ("LANGUAGES", [
+                Skill(name: "Swift", value: 0.9),
+                Skill(name: "Objective-C", value: 0.7)
+            ]),
+            ("iOS SDK", [
+                Skill(name: "Autolayout", value: 0.8),
+                Skill(name: "Networking", value: 0.7),
+                Skill(name: "Core Location", value: 0.9),
+                Skill(name: "Core Data", value: 0.6)
+            ]),
+            ("TOOLS", [
+                Skill(name: "Xcode", value: 0.8),
+                Skill(name: "Git", value: 0.8),
+                Skill(name: "CocoaPods", value: 0.6),
+                Skill(name: "Social Networks API", value: 0.6)
+            ]),
+            ("COMMON", [
+                Skill(name: "OOD", value: 0.9),
+                Skill(name: "Design Patterns", value: 0.8),
+                Skill(name: "MVC/MVVM", value: 0.9),
+                Skill(name: "Continuous Integration", value: 0.6)
+            ]),
+        ]
     }
 }
