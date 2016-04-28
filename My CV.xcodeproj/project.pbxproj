@@ -21,6 +21,12 @@
 		EC895E081CD1106000D3FD46 /* ColorsPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E071CD1106000D3FD46 /* ColorsPalette.swift */; };
 		EC895E0A1CD11AFF00D3FD46 /* TrapezeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E091CD11AFF00D3FD46 /* TrapezeButton.swift */; };
 		EC895E0D1CD11E8A00D3FD46 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E0C1CD11E8A00D3FD46 /* MenuViewController.swift */; };
+		EC895E111CD1302C00D3FD46 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E101CD1302C00D3FD46 /* PhotoCell.swift */; };
+		EC895E131CD130C600D3FD46 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E121CD130C600D3FD46 /* AboutViewController.swift */; };
+		EC895E151CD138C200D3FD46 /* SlicedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E141CD138C200D3FD46 /* SlicedView.swift */; };
+		EC895E171CD13D0E00D3FD46 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E161CD13D0E00D3FD46 /* HeaderCell.swift */; };
+		EC895E191CD141DF00D3FD46 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E181CD141DF00D3FD46 /* AboutCell.swift */; };
+		EC895E1B1CD1496500D3FD46 /* ListBulletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E1A1CD1496500D3FD46 /* ListBulletCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		EC895E071CD1106000D3FD46 /* ColorsPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorsPalette.swift; path = Helpers/Constants/ColorsPalette.swift; sourceTree = "<group>"; };
 		EC895E091CD11AFF00D3FD46 /* TrapezeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrapezeButton.swift; path = Helpers/Views/TrapezeButton.swift; sourceTree = "<group>"; };
 		EC895E0C1CD11E8A00D3FD46 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = "Classes/Main Menu/MenuViewController.swift"; sourceTree = "<group>"; };
+		EC895E101CD1302C00D3FD46 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCell.swift; path = "Classes/About Me/Cells/PhotoCell.swift"; sourceTree = "<group>"; };
+		EC895E121CD130C600D3FD46 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = "Classes/About Me/AboutViewController.swift"; sourceTree = "<group>"; };
+		EC895E141CD138C200D3FD46 /* SlicedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlicedView.swift; path = Helpers/Views/SlicedView.swift; sourceTree = "<group>"; };
+		EC895E161CD13D0E00D3FD46 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderCell.swift; path = Helpers/Views/HeaderCell.swift; sourceTree = "<group>"; };
+		EC895E181CD141DF00D3FD46 /* AboutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutCell.swift; path = "Classes/About Me/Cells/AboutCell.swift"; sourceTree = "<group>"; };
+		EC895E1A1CD1496500D3FD46 /* ListBulletCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListBulletCell.swift; path = "Classes/About Me/Cells/ListBulletCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,7 @@
 			children = (
 				EC895DFD1CD10A5400D3FD46 /* Welcome */,
 				EC895E0B1CD11E3B00D3FD46 /* Main Menu */,
+				EC895E0E1CD12FC600D3FD46 /* About Me */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -102,6 +115,7 @@
 		EC895DF21CD1067800D3FD46 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EC895E1C1CD2199200D3FD46 /* Protocols */,
 				EC895DFE1CD10A6D00D3FD46 /* Views */,
 				EC895E061CD1102A00D3FD46 /* Constants */,
 			);
@@ -167,6 +181,8 @@
 			children = (
 				EC895DFF1CD10A9A00D3FD46 /* RoundedButton.swift */,
 				EC895E091CD11AFF00D3FD46 /* TrapezeButton.swift */,
+				EC895E141CD138C200D3FD46 /* SlicedView.swift */,
+				EC895E161CD13D0E00D3FD46 /* HeaderCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -185,6 +201,32 @@
 				EC895E0C1CD11E8A00D3FD46 /* MenuViewController.swift */,
 			);
 			name = "Main Menu";
+			sourceTree = "<group>";
+		};
+		EC895E0E1CD12FC600D3FD46 /* About Me */ = {
+			isa = PBXGroup;
+			children = (
+				EC895E121CD130C600D3FD46 /* AboutViewController.swift */,
+				EC895E0F1CD1300400D3FD46 /* Cells */,
+			);
+			name = "About Me";
+			sourceTree = "<group>";
+		};
+		EC895E0F1CD1300400D3FD46 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EC895E101CD1302C00D3FD46 /* PhotoCell.swift */,
+				EC895E181CD141DF00D3FD46 /* AboutCell.swift */,
+				EC895E1A1CD1496500D3FD46 /* ListBulletCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		EC895E1C1CD2199200D3FD46 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,12 +304,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC895DF81CD1074600D3FD46 /* PrettyImageView.swift in Sources */,
+				EC895E111CD1302C00D3FD46 /* PhotoCell.swift in Sources */,
 				EC895E021CD10C5000D3FD46 /* WelcomeViewController.swift in Sources */,
+				EC895E1B1CD1496500D3FD46 /* ListBulletCell.swift in Sources */,
 				EC05A0791CCFE8C3000E263B /* ViewController.swift in Sources */,
+				EC895E171CD13D0E00D3FD46 /* HeaderCell.swift in Sources */,
 				EC05A0771CCFE8C3000E263B /* AppDelegate.swift in Sources */,
 				EC895E001CD10A9A00D3FD46 /* RoundedButton.swift in Sources */,
+				EC895E151CD138C200D3FD46 /* SlicedView.swift in Sources */,
 				EC895E0A1CD11AFF00D3FD46 /* TrapezeButton.swift in Sources */,
+				EC895E191CD141DF00D3FD46 /* AboutCell.swift in Sources */,
 				EC895E081CD1106000D3FD46 /* ColorsPalette.swift in Sources */,
+				EC895E131CD130C600D3FD46 /* AboutViewController.swift in Sources */,
 				EC895E0D1CD11E8A00D3FD46 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
