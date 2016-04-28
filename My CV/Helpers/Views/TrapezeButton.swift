@@ -44,6 +44,18 @@ class TrapezeButton: UIButton {
         self.layer.shouldRasterize = true
     }
     
+    func setPressed(pressed: Bool) {
+        guard selected != pressed else { return }
+        
+        let inset: CGFloat = pressed ? 5 : -5
+        selected = pressed
+        UIView.animateWithDuration(0.08, delay: 0.0,
+                                   options: UIViewAnimationOptions.CurveEaseInOut,
+                                   animations: {
+                                    self.frame = CGRectInset(self.frame, inset, inset)
+                                   }, completion: nil)
+    }
+    
     override func drawRect(rect: CGRect) {
         let path = UIBezierPath()
         
@@ -65,5 +77,19 @@ class TrapezeButton: UIButton {
         color.setFill()
         path.fill()
     }
-
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
+        setPressed(true)
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesEnded(touches, withEvent: event)
+        setPressed(false)
+    }
+    
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+        super.touchesCancelled(touches, withEvent: event)
+        setPressed(false)
+    }
 }

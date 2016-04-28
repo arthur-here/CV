@@ -10,6 +10,9 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
+    var buttons = [TrapezeButton]()
+    var lastSelectedButton: TrapezeButton?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButtons()
@@ -34,8 +37,9 @@ class MenuViewController: UIViewController {
             let button = TrapezeButton(frame: rect, trapezeOffset: trapezeOffset, direction: i % 2 == 0 ? .Left : .Right)
             button.setTitle(title, forState: .Normal)
             button.color = buttonColors[i]
-            button.addTarget("self", action: Selector(selectors[i]), forControlEvents: UIControlEvents.TouchUpInside)
+            button.addTarget("self", action: Selector(selectors[i]), forControlEvents: .TouchUpInside)
             view.addSubview(button)
+            buttons.append(button)
         }
         
     }
@@ -45,19 +49,19 @@ class MenuViewController: UIViewController {
     }
     
     func showWorkExperience() {
-        performSegueWithIdentifier(Storyboard.Segues.WorkExperience, sender: nil)
+//        performSegueWithIdentifier(Storyboard.Segues.WorkExperience, sender: nil)
     }
     
     func showSkills() {
-        performSegueWithIdentifier(Storyboard.Segues.Skills, sender: nil)
+//        performSegueWithIdentifier(Storyboard.Segues.Skills, sender: nil)
     }
     
     func showEducation() {
-        performSegueWithIdentifier(Storyboard.Segues.Education, sender: nil)
+//        performSegueWithIdentifier(Storyboard.Segues.Education, sender: nil)
     }
     
     func showContact() {
-        performSegueWithIdentifier(Storyboard.Segues.Contact, sender: nil)
+//        performSegueWithIdentifier(Storyboard.Segues.Contact, sender: nil)
     }
     
     private struct Storyboard {
