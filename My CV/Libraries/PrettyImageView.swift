@@ -5,6 +5,7 @@
 //  Created by Arthur Myronenko on 19.05.15.
 //  Copyright (c) 2015 Arthur Myronenko. All rights reserved.
 //
+//  https://github.com/burntheroad/Pretty-Image-View
 
 import UIKit
 

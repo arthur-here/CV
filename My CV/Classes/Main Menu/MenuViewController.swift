@@ -12,7 +12,15 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupButtons()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    private func setupButtons() {
         let buttonTitles = ["ABOUT ME", "WORK EXPERIENCE", "SKILLS", "EDUCATION", "CONTACT"]
         let buttonColors = [ColorsPalette.Red1, ColorsPalette.Red2, ColorsPalette.Red3, ColorsPalette.Red4, ColorsPalette.Red5]
         let selectors = ["showAbout", "showWorkExperience", "showSkills", "showEducation", "showContact"]
@@ -29,6 +37,7 @@ class MenuViewController: UIViewController {
             button.addTarget("self", action: Selector(selectors[i]), forControlEvents: UIControlEvents.TouchUpInside)
             view.addSubview(button)
         }
+        
     }
     
     func showAbout() {
@@ -49,11 +58,6 @@ class MenuViewController: UIViewController {
     
     func showContact() {
         performSegueWithIdentifier(Storyboard.Segues.Contact, sender: nil)
-    }
-    
-
-    override func prefersStatusBarHidden() -> Bool {
-        return false
     }
     
     private struct Storyboard {

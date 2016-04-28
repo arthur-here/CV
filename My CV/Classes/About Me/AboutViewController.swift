@@ -2,7 +2,7 @@
 //  AboutViewController.swift
 //  My CV
 //
-//  Created by Arthur Myronenko on 4/27/16.
+//  Created by Arthur Myronenko on 4/28/16.
 //  Copyright © 2016 Arthur Myronenko. All rights reserved.
 //
 
@@ -15,15 +15,8 @@ enum AboutData {
     case ListElement(text: String)
 }
 
-class AboutViewController: UIViewController {
+class AboutViewController: UITableViewController {
 
-    @IBOutlet weak var tableView: UITableView! {
-        didSet {
-            tableView.dataSource = self
-            tableView.delegate = self
-        }
-    }
-    
     var data: [AboutData] = [
         .Photo(name: "profile-picture"),
         .Header(title: "WHO I AM"),
@@ -36,6 +29,12 @@ class AboutViewController: UIViewController {
         .ListElement(text: "the desire to learn and to be on the crest of the wave of the constant tech growth")
     ]
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigationBar()
+        title = "ABOUT ME"
+    }
+    
     private func cellIdentifierForIndexPath(indexPath: NSIndexPath) -> String {
         let record = data[indexPath.row]
         switch record {
@@ -46,10 +45,6 @@ class AboutViewController: UIViewController {
         }
     }
     
-    @IBAction func close() {
-        navigationController?.popViewControllerAnimated(true)
-    }
-
     private struct Storyboard {
         struct Cells {
             static let Photo = "Photo Cell"
@@ -60,16 +55,18 @@ class AboutViewController: UIViewController {
     }
 }
 
-extension AboutViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+// MARK: - UITableViewDataSource
+extension AboutViewController {
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let identifier = cellIdentifierForIndexPath(indexPath)
         let record = data[indexPath.row]
         
@@ -95,8 +92,10 @@ extension AboutViewController: UITableViewDataSource {
     }
 }
 
-extension AboutViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+// MARK: - UITableViewDelegate
+extension AboutViewController {
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let identifier = cellIdentifierForIndexPath(indexPath)
         
         switch identifier {
@@ -108,7 +107,7 @@ extension AboutViewController: UITableViewDelegate {
         }
     }
     
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return self.tableView(tableView, heightForRowAtIndexPath: indexPath)
     }
 }
