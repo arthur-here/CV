@@ -47,13 +47,17 @@ class TrapezeButton: UIButton {
     func setPressed(pressed: Bool) {
         guard selected != pressed else { return }
         
-        let inset: CGFloat = pressed ? 5 : -5
+        let inset: CGFloat = pressed ? 10 : -10
         selected = pressed
-        UIView.animateWithDuration(0.08, delay: 0.0,
-                                   options: UIViewAnimationOptions.CurveEaseInOut,
+        UIView.animateWithDuration(0.8,
+                                   delay: 0.0,
+                                   usingSpringWithDamping: 0.6,
+                                   initialSpringVelocity: 0.5,
+                                   options: .AllowUserInteraction,
                                    animations: {
                                     self.frame = CGRectInset(self.frame, inset, inset)
-                                   }, completion: nil)
+                                   },
+                                   completion: nil)
     }
     
     override func drawRect(rect: CGRect) {

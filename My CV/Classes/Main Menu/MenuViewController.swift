@@ -16,6 +16,8 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButtons()
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
+        view.addGestureRecognizer(panGesture)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -62,6 +64,33 @@ class MenuViewController: UIViewController {
     
     func showContact() {
 //        performSegueWithIdentifier(Storyboard.Segues.Contact, sender: nil)
+    }
+    
+    @objc func handlePanGesture(gesture: UIPanGestureRecognizer) {
+        let location = gesture.locationInView(view)
+        guard let selectedButton = view.hitTest(location, withEvent: nil) as? TrapezeButton else {
+            lastSelectedButton?.setPressed(false)
+            lastSelectedButton = nil
+            return
+        }
+        
+        switch gesture.state {
+        case .Began:
+            selectedButton.setPressed(true)
+            lastSelectedButton = selectedButton
+        case .Changed:
+            if selectedButton != lastSelectedButton {
+                selectedButton.setPressed(true)
+                lastSelectedButton?.setPressed(false)
+                lastSelectedButton = selectedButton
+            }
+        case .Ended:
+            selectedButton.setPressed(false)
+            selectedButton.sendActionsForControlEvents(.TouchUpInside)
+            lastSelectedButton = nil
+        default:
+            print("State - \(gesture.state)")
+        }
     }
     
     private struct Storyboard {
