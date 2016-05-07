@@ -40,9 +40,13 @@ class ProgressBar: UIView {
     
     func setValue(value: Double, animated: Bool = false) {
         self.value = value
+        update(animated)
+    }
+    
+    func update(animated: Bool = false) {
         if (animated) {
             UIView.animateWithDuration(Configuration.AnimationDuration) {
-                self.progressView.frame.size.width = self.frame.width * CGFloat(value)
+                self.progressView.frame.size.width = self.frame.width * CGFloat(self.value)
             }
         } else {
             progressView.frame.size.width = frame.width * CGFloat(value)

@@ -63,7 +63,9 @@ class ContactViewController: UIViewController {
         }
     }
     
-    private func composeEmail(recipient: String) {
+    private func composeEmail(recipient: String) { 
+        guard MFMailComposeViewController.canSendMail() else { return }
+        
         let composeVC = MFMailComposeViewController()
         composeVC.mailComposeDelegate = self
         

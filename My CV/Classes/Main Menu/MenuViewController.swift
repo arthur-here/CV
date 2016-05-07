@@ -93,7 +93,7 @@ class MenuViewController: UIViewController {
             selectedButton.sendActionsForControlEvents(.TouchUpInside)
             lastSelectedButton = nil
         default:
-            break
+            lastSelectedButton?.setPressed(false)
         }
     }
     

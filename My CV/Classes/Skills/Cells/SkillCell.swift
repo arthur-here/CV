@@ -12,4 +12,9 @@ class SkillCell: UITableViewCell {
 
     @IBOutlet weak var skillNameLabel: UILabel!
     @IBOutlet weak var progressBar: ProgressBar!
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        progressBar.update(true)
+    }
 }
