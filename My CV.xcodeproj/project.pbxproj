@@ -36,6 +36,9 @@
 		EC895E311CD2927600D3FD46 /* SkillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E301CD2927600D3FD46 /* SkillCell.swift */; };
 		EC895E331CD292BE00D3FD46 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E321CD292BE00D3FD46 /* Skill.swift */; };
 		EC895E351CD2941500D3FD46 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E341CD2941500D3FD46 /* SkillsViewController.swift */; };
+		EC895E381CD2A7D500D3FD46 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E371CD2A7D500D3FD46 /* EducationViewController.swift */; };
+		ECA4C72A1CD9FBF80010CC08 /* LinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4C7291CD9FBF80010CC08 /* LinkLabel.swift */; };
+		ECA4C72C1CDA02680010CC08 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4C72B1CDA02680010CC08 /* ContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		EC895E301CD2927600D3FD46 /* SkillCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SkillCell.swift; path = Classes/Skills/Cells/SkillCell.swift; sourceTree = "<group>"; };
 		EC895E321CD292BE00D3FD46 /* Skill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Skill.swift; path = Models/Skill.swift; sourceTree = "<group>"; };
 		EC895E341CD2941500D3FD46 /* SkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SkillsViewController.swift; path = Classes/Skills/SkillsViewController.swift; sourceTree = "<group>"; };
+		EC895E371CD2A7D500D3FD46 /* EducationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EducationViewController.swift; path = Classes/Education/EducationViewController.swift; sourceTree = "<group>"; };
+		ECA4C7291CD9FBF80010CC08 /* LinkLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkLabel.swift; path = Helpers/Views/LinkLabel.swift; sourceTree = "<group>"; };
+		ECA4C72B1CDA02680010CC08 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactViewController.swift; path = Classes/Contact/ContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,8 @@
 				EC895E0E1CD12FC600D3FD46 /* About Me */,
 				EC895E211CD2363300D3FD46 /* Work Experience */,
 				EC895E2E1CD2923900D3FD46 /* Skills */,
+				EC895E361CD2A7A400D3FD46 /* Education */,
+				ECA4C72D1CDA026B0010CC08 /* Contact */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -207,6 +215,7 @@
 				EC895E141CD138C200D3FD46 /* SlicedView.swift */,
 				EC895E161CD13D0E00D3FD46 /* HeaderCell.swift */,
 				EC895E2C1CD28F4800D3FD46 /* ProgressBar.swift */,
+				ECA4C7291CD9FBF80010CC08 /* LinkLabel.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -294,6 +303,22 @@
 				EC895E301CD2927600D3FD46 /* SkillCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		EC895E361CD2A7A400D3FD46 /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				EC895E371CD2A7D500D3FD46 /* EducationViewController.swift */,
+			);
+			name = Education;
+			sourceTree = "<group>";
+		};
+		ECA4C72D1CDA026B0010CC08 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4C72B1CDA02680010CC08 /* ContactViewController.swift */,
+			);
+			name = Contact;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,14 +411,17 @@
 				EC895E1E1CD21AEF00D3FD46 /* CustomNavigationBarType.swift in Sources */,
 				EC895E151CD138C200D3FD46 /* SlicedView.swift in Sources */,
 				EC895E0A1CD11AFF00D3FD46 /* TrapezeButton.swift in Sources */,
+				ECA4C72C1CDA02680010CC08 /* ContactViewController.swift in Sources */,
 				EC895E191CD141DF00D3FD46 /* AboutCell.swift in Sources */,
 				EC895E281CD23D0E00D3FD46 /* WorkExample.swift in Sources */,
 				EC895E081CD1106000D3FD46 /* ColorsPalette.swift in Sources */,
 				EC895E311CD2927600D3FD46 /* SkillCell.swift in Sources */,
+				EC895E381CD2A7D500D3FD46 /* EducationViewController.swift in Sources */,
 				EC895E201CD21F0300D3FD46 /* AboutViewController.swift in Sources */,
 				EC895E0D1CD11E8A00D3FD46 /* MenuViewController.swift in Sources */,
 				EC895E2D1CD28F4800D3FD46 /* ProgressBar.swift in Sources */,
 				EC895E261CD23A2D00D3FD46 /* WorkExampleViewController.swift in Sources */,
+				ECA4C72A1CD9FBF80010CC08 /* LinkLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

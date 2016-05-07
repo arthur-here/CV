@@ -59,11 +59,11 @@ class MenuViewController: UIViewController {
     }
     
     func showEducation() {
-//        performSegueWithIdentifier(Storyboard.Segues.Education, sender: nil)
+        performSegueWithIdentifier(Storyboard.Segues.Education, sender: nil)
     }
     
     func showContact() {
-//        performSegueWithIdentifier(Storyboard.Segues.Contact, sender: nil)
+        performSegueWithIdentifier(Storyboard.Segues.Contact, sender: nil)
     }
     
     @objc func handlePanGesture(gesture: UIPanGestureRecognizer) {

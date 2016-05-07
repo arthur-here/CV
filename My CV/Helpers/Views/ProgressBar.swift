@@ -25,7 +25,7 @@ class ProgressBar: UIView {
     
     private func setup() {
         backgroundColor = ColorsPalette.LightGray
-        layer.cornerRadius = 7.0
+        layer.cornerRadius = 6.0
         layer.masksToBounds = true
         
         progressView = UIView(frame: CGRect(x: 0, y: 0, width: frame.width * CGFloat(value), height: frame.height))
