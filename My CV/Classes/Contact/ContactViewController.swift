@@ -40,7 +40,7 @@ class ContactViewController: UIViewController {
     }
     @IBOutlet weak var twitterLabel: LinkLabel! {
         didSet {
-            twitterLabel.link = Link.Web(url: NSURL(string: "http://twitter.com/monkey_has_gone")!)
+            twitterLabel.link = Link.Web(url: NSURL(string: "https://twitter.com/monkey_has_gone")!)
             twitterLabel.tapHandler = handleLink
         }
     }

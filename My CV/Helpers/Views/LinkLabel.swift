@@ -16,6 +16,10 @@ enum Link {
 
 @IBDesignable
 class LinkLabel: UILabel {
+    
+    private struct Configuration {
+        static let BottomLineHeight: CGFloat = 3.0
+    }
 
     var link: Link?
     var tapHandler: (Link -> Void)? {
@@ -32,14 +36,16 @@ class LinkLabel: UILabel {
     private lazy var bottomBorder: CALayer = {
         let border = CALayer()
         border.backgroundColor = ColorsPalette.RedDefault.CGColor
-        border.frame = CGRect(x: 0, y: self.bounds.maxY, width: self.bounds.width, height: 3)
+        border.frame = CGRect(x: 0, y: self.bounds.maxY,
+                              width: self.bounds.width, height: Configuration.BottomLineHeight)
         self.layer.addSublayer(border)
         return border
     }()
     
     private func setupUi() {
         bottomBorder.hidden = !bottomLineVisible
-        bottomBorder.frame = CGRect(x: 0, y: bounds.maxY, width: bounds.width, height: 3)
+        bottomBorder.frame = CGRect(x: 0, y: bounds.maxY,
+                                    width: bounds.width, height: Configuration.BottomLineHeight)
     }
     
     override func layoutSubviews() {

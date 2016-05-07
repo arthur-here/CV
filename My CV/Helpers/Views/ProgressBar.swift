@@ -10,6 +10,11 @@ import UIKit
 
 class ProgressBar: UIView {
 
+    private struct Configuration {
+        static let CornerRadius: CGFloat = 6.0
+        static let AnimationDuration = 0.5
+    }
+    
     var progressView: UIView!
     private var value: Double = 0.0
     
@@ -25,7 +30,7 @@ class ProgressBar: UIView {
     
     private func setup() {
         backgroundColor = ColorsPalette.LightGray
-        layer.cornerRadius = 6.0
+        layer.cornerRadius = Configuration.CornerRadius
         layer.masksToBounds = true
         
         progressView = UIView(frame: CGRect(x: 0, y: 0, width: frame.width * CGFloat(value), height: frame.height))
@@ -36,7 +41,7 @@ class ProgressBar: UIView {
     func setValue(value: Double, animated: Bool = false) {
         self.value = value
         if (animated) {
-            UIView.animateWithDuration(0.5) {
+            UIView.animateWithDuration(Configuration.AnimationDuration) {
                 self.progressView.frame.size.width = self.frame.width * CGFloat(value)
             }
         } else {

@@ -10,6 +10,10 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
+    private struct Configuration {
+        static let Margin: CGFloat = 60.0
+    }
+    
     var buttons = [TrapezeButton]()
     var lastSelectedButton: TrapezeButton?
     
@@ -30,7 +34,7 @@ class MenuViewController: UIViewController {
         let buttonColors = [ColorsPalette.Red1, ColorsPalette.Red2, ColorsPalette.Red3, ColorsPalette.Red4, ColorsPalette.Red5]
         let selectors = ["showAbout", "showWorkExperience", "showSkills", "showEducation", "showContact"]
         
-        let margin: CGFloat = 60.0
+        let margin = Configuration.Margin
         let buttonHeight: CGFloat = (view.frame.height - margin * 2 + 100) / 5.0
         let trapezeOffset: CGFloat = buttonHeight * 0.15
         
@@ -89,7 +93,7 @@ class MenuViewController: UIViewController {
             selectedButton.sendActionsForControlEvents(.TouchUpInside)
             lastSelectedButton = nil
         default:
-            print("State - \(gesture.state)")
+            break
         }
     }
     

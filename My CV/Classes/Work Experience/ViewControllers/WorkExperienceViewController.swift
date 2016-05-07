@@ -12,7 +12,7 @@ class WorkExperienceViewController: UIViewController {
     
     var pageViewController: UIPageViewController!
 
-    let examples = DataProvider().getWorkExamples()
+    let examples = StubDataProvider().getWorkExamples()
     
     override func viewDidLoad() {
         super.viewDidLoad()

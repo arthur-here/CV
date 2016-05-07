@@ -13,7 +13,7 @@ enum TrapezeButtonDirection {
 }
 
 class TrapezeButton: UIButton {
-
+    
     let trapezeOffset: CGFloat
     let direction: TrapezeButtonDirection
     var color = ColorsPalette.RedDefault

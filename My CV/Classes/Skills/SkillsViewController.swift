@@ -15,8 +15,8 @@ private enum SkillData {
 
 class SkillsViewController: UITableViewController {
 
-    private let data = DataProvider().getSkills().reduce([]) { (result, value) -> [SkillData] in
-        result + [SkillData.Header(title: value.0)] + value.1.map { SkillData.SkillCell(skill: $0) }
+    private let data = StubDataProvider().getSkills().reduce([]) { (total, value) -> [SkillData] in
+        total + [SkillData.Header(title: value.0)] + value.1.map { SkillData.SkillCell(skill: $0) }
     }
     
     override func viewWillAppear(animated: Bool) {

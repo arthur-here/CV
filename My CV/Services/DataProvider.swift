@@ -8,7 +8,13 @@
 
 import UIKit
 
-class DataProvider {
+protocol DataProvider {
+    func getWorkExamples() -> [WorkExample]
+    
+    func getSkills() -> [(String, [Skill])]
+}
+
+class StubDataProvider: DataProvider {
     
     func getWorkExamples() -> [WorkExample] {
         let first = WorkExample(name: "Speedometer",

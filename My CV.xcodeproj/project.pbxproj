@@ -26,7 +26,7 @@
 		EC895E171CD13D0E00D3FD46 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E161CD13D0E00D3FD46 /* HeaderCell.swift */; };
 		EC895E191CD141DF00D3FD46 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E181CD141DF00D3FD46 /* AboutCell.swift */; };
 		EC895E1B1CD1496500D3FD46 /* ListBulletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E1A1CD1496500D3FD46 /* ListBulletCell.swift */; };
-		EC895E1E1CD21AEF00D3FD46 /* CustomNavigationBarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E1D1CD21AEF00D3FD46 /* CustomNavigationBarType.swift */; };
+		EC895E1E1CD21AEF00D3FD46 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E1D1CD21AEF00D3FD46 /* Extensions.swift */; };
 		EC895E201CD21F0300D3FD46 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E1F1CD21F0300D3FD46 /* AboutViewController.swift */; };
 		EC895E231CD2367500D3FD46 /* WorkExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E221CD2367500D3FD46 /* WorkExperienceViewController.swift */; };
 		EC895E261CD23A2D00D3FD46 /* WorkExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC895E251CD23A2D00D3FD46 /* WorkExampleViewController.swift */; };
@@ -63,7 +63,7 @@
 		EC895E161CD13D0E00D3FD46 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderCell.swift; path = Helpers/Views/HeaderCell.swift; sourceTree = "<group>"; };
 		EC895E181CD141DF00D3FD46 /* AboutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutCell.swift; path = "Classes/About Me/Cells/AboutCell.swift"; sourceTree = "<group>"; };
 		EC895E1A1CD1496500D3FD46 /* ListBulletCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListBulletCell.swift; path = "Classes/About Me/Cells/ListBulletCell.swift"; sourceTree = "<group>"; };
-		EC895E1D1CD21AEF00D3FD46 /* CustomNavigationBarType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomNavigationBarType.swift; path = Protocols/CustomNavigationBarType.swift; sourceTree = "<group>"; };
+		EC895E1D1CD21AEF00D3FD46 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Protocols/Extensions.swift; sourceTree = "<group>"; };
 		EC895E1F1CD21F0300D3FD46 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = "Classes/About Me/AboutViewController.swift"; sourceTree = "<group>"; };
 		EC895E221CD2367500D3FD46 /* WorkExperienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkExperienceViewController.swift; path = "Classes/Work Experience/ViewControllers/WorkExperienceViewController.swift"; sourceTree = "<group>"; };
 		EC895E251CD23A2D00D3FD46 /* WorkExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkExampleViewController.swift; path = "Classes/Work Experience/ViewControllers/WorkExampleViewController.swift"; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 		EC895E1C1CD2199200D3FD46 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				EC895E1D1CD21AEF00D3FD46 /* CustomNavigationBarType.swift */,
+				EC895E1D1CD21AEF00D3FD46 /* Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -408,7 +408,7 @@
 				EC05A0771CCFE8C3000E263B /* AppDelegate.swift in Sources */,
 				EC895E331CD292BE00D3FD46 /* Skill.swift in Sources */,
 				EC895E001CD10A9A00D3FD46 /* RoundedButton.swift in Sources */,
-				EC895E1E1CD21AEF00D3FD46 /* CustomNavigationBarType.swift in Sources */,
+				EC895E1E1CD21AEF00D3FD46 /* Extensions.swift in Sources */,
 				EC895E151CD138C200D3FD46 /* SlicedView.swift in Sources */,
 				EC895E0A1CD11AFF00D3FD46 /* TrapezeButton.swift in Sources */,
 				ECA4C72C1CDA02680010CC08 /* ContactViewController.swift in Sources */,
